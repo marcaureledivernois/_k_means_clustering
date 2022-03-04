@@ -10,14 +10,16 @@ def load_dataset(name):
 def euclidian(a, b):
     return np.linalg.norm(a-b)
 
+#define class which inherit K, class takes incorporate all functions
 
 def plot(dataset, history_centroids, belongs_to):
     colors = ['r', 'g']
 
     fig, ax = plt.subplots()
 
-    for index in range(dataset.shape[0]):
+    for index in range(dataset.shape[0]): #for index in range(k):
         instances_close = [i for i in range(len(belongs_to)) if belongs_to[i] == index]
+        print(instances_close)
         for instance_index in instances_close:
             ax.plot(dataset[instance_index][0], dataset[instance_index][1], (colors[index] + 'o'))
 
@@ -34,6 +36,12 @@ def plot(dataset, history_centroids, belongs_to):
 
 
 def kmeans(k, epsilon=0, distance='euclidian'):
+    """
+    :param k: The number of clusters (required)
+    :param epsilon: The minimum error to be used in the stop condition (optional, default == 0)
+    :param distance: The method is used to calculate the distance (Optional default == 0)
+    :return: the centroids, the evolution history of centroids, the membership vector of each instance with its respective centroid
+    """
     history_centroids = []
     if distance == 'euclidian':
         dist_method = euclidian
