@@ -29,6 +29,10 @@ If you have an idea how many clusters there are, use that as K. If not, **elbow 
 At some point, increasing the number of clusters do not decrease much the errors.
 * Pick K that is right at the elbow. 
 
+## Drawbacks
+
+Tendency to produce equal-sized clusters. Alternative : Expectation–maximization algorithm.
+
 ## Libraries 
 * This project has a K-means clustering algorithm built from scratch 
 * scikit-learn has a built-in kmeans algorithm
