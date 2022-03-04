@@ -1,23 +1,41 @@
-# k_means_clustering
-This is the code for "K-Means Clustering - The Math of Intelligence (Week 3)" By SIraj Raval on Youtube
+# K-means clustering
+Unsupervised. Clustering algorithms try to find natural groupings in data. 
+Similar data points (according to some notion of similarity) are considered in the same group. 
+We call these groups clusters. There are K clusters. To find the optimal number of clusters, use the **elbow method**.
 
-## Overview 
+## How does it works?
 
-This is the code for [this](https://youtu.be/9991JlKnFmk) video on Youtube by Siraj Raval as part of The Math of Intelligence course. 
+* Place K **centroids** at random locations. Compute Euclidean distance of all points to the K centroids. 
+* For each point, find the nearest centroid and assign the point to the respective cluster j.
+* Now, we update the centroids. For each cluster, compute the mean of all points belonging to the cluster. The mean point 
+is the new centroid.
+* Repeat until convergence (when all centroids move less than a threshold alpha)
 
-## Dependencies
+## Use cases
 
-* numpy 
-* matplotlib
+* Great when no labels available
+* Numeric data. **Does not work with categorical data !!**, because we need to compute Euclidean distances. 
+* Simple and fast
+* Shine with multivariate data. Possible to run PCA (dimensionality reduction) then K-means clustering.
 
-Install missing dependencies using [pip](https://pip.pypa.io/en/stable/).
+## How to chose K?
 
-## Usage
+If you have an idea how many clusters there is, use that as K. If not, **elbow method** is used to chose optimal number of clusters K.
 
-Just run `jupyter notebook` in terminal and you can visit the notebook in your web browser.
+## Elbow method
 
-Install `jupyter` from [here](http://jupyter.readthedocs.io/en/latest/install.html)
+* Run K-means for a range of values for K. Compute the sum of errors (SSE) : Euclidean distances between the points and their respective centroid. 
+* Plot(number of clusters, sum of Euclidean distances). The plot should be a decreasing function, and should look like an elbow.
+At some point, increasing the number of clusters do not decrease much the errors.
+* Pick K that is right at the elbow. 
+
+## Git examples
+
+* [Fraud Detection](https://github.com/georgymh/ml-fraud-detection) 
+* [MNIST digit classification without labels](https://github.com/Datamine/MNIST-K-Means-Clustering/blob/master/Kmeans.ipynb) 
+* [PCA then K-means clustering](https://github.com/yesblogger/Data_Science/blob/master/K-means_from_scratch/K-means_clustering.ipynb)
 
 ## Credits
 
-The credits for a big part of the code go to [gleydson](https://github.com/gleydson404). I've merely created a wrapper to get people started. 
+* Siraj Raval
+* [gleydson](https://github.com/gleydson404)
