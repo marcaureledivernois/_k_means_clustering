@@ -20,14 +20,18 @@ is the new centroid.
 
 ## How to chose K?
 
-If you have an idea how many clusters there is, use that as K. If not, **elbow method** is used to chose optimal number of clusters K.
+If you have an idea how many clusters there are, use that as K. If not, **elbow method** is used to chose optimal number of clusters K.
 
 ## Elbow method
 
-* Run K-means for a range of values for K. Compute the sum of errors (SSE) : Euclidean distances between the points and their respective centroid. 
+* Run K-means for a range of values for K. For each run, compute the sum of errors (SSE) : Euclidean distances between the points and their respective centroid. 
 * Plot(number of clusters, sum of Euclidean distances). The plot should be a decreasing function, and should look like an elbow.
 At some point, increasing the number of clusters do not decrease much the errors.
 * Pick K that is right at the elbow. 
+
+## Libraries 
+* This project has a K-means clustering algorithm built from scratch 
+* scikit-learn has a built-in kmeans algorithm
 
 ## Git examples
 
