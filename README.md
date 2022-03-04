@@ -3,7 +3,7 @@ Unsupervised. Clustering algorithms try to find natural groupings in data.
 Similar data points (according to some notion of similarity) are considered in the same group. 
 We call these groups clusters. There are K clusters. To find the optimal number of clusters, use the **elbow method**.
 
-## How does it works?
+## How does it work?
 
 * Place K **centroids** at random locations. Compute Euclidean distance of all points to the K centroids. 
 * For each point, find the nearest centroid and assign the point to the respective cluster j.
