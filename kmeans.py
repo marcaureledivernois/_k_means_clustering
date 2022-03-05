@@ -8,7 +8,6 @@ def load_dataset(name):
 
 dataset = load_dataset('durudataset.txt')
 
-
 def plot(k, dataset, prototypes, belongs_to, iterat):
 
 
