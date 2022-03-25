@@ -46,4 +46,5 @@ Tendency to produce equal-sized clusters. Alternative : Expectation–maximizati
 ## Credits
 
 * Siraj Raval
-* [gleydson](https://github.com/gleydson404)
+* Disclaimer : Code is used as an illustration of the README theory file. Code has been forked from [gleydson](https://github.com/gleydson404). I mainly corrected/updated it to make it work on my computers.
+
